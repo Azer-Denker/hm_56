@@ -4,11 +4,11 @@ from django.core.validators import MinValueValidator
 
 DEFAULT_CATEGORY = 'other'
 CATEGORY_CHOICES = (
-    (DEFAULT_CATEGORY, 'Разное'),
+    (DEFAULT_CATEGORY, 'Другое'),
     ('food', 'Еда'),
-    ('tech', 'Бытовая техника'),
-    ('tools', 'Инструменты'),
-    ('toys', 'Игрушки'),
+    ('drink', 'Вода'),
+    ('cloth', 'Одежда'),
+    ('electronics', 'Электроника')
 )
 
 
@@ -27,15 +27,3 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
-
-
-class Cart(models.Model):
-    products = models.ForeignKey('webapp.Product', related_name='cart', on_delete=models.CASCADE)
-    qty = models.IntegerField(verbose_name='Количество', validators=(MinValueValidator(0),))
-
-    def __str__(self):
-        return f'{self.qty}'
-
-    class Meta:
-        verbose_name = 'Корзина'
-        verbose_name_plural = 'Корзины'

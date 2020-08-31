@@ -11,7 +11,7 @@ class IndexView(ListView):
     template_name = 'products/index.html'
     ordering = ['category', 'name']
     form_class = SimpleSearchForm
-    paginate_by = 5
+    paginate_by = 3
     context_object_name = 'products'
 
     def get_queryset(self):
@@ -33,7 +33,7 @@ class IndexView(ListView):
 
 class ProductView(DetailView):
     model = Product
-    template_name = 'products/product_view.html'
+    template_name = 'products/view.html'
 
     def get_queryset(self):
         return super().get_queryset().filter(amount__gt=0)
@@ -47,7 +47,7 @@ class ProductView(DetailView):
 class ProductCreateView(CreateView):
     model = Product
     form_class = ProductForm
-    template_name = 'products/product_create.html'
+    template_name = 'products/create.html'
 
     def get_success_url(self):
         return reverse('product_view', kwargs={'pk': self.object.pk})
@@ -56,7 +56,7 @@ class ProductCreateView(CreateView):
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
-    template_name = 'products/product_update.html'
+    template_name = 'products/update.html'
 
     def get_success_url(self):
         return reverse('product_view', kwargs={'pk': self.object.pk})
@@ -67,9 +67,8 @@ class ProductUpdateView(UpdateView):
 
 class ProductDeleteView(DeleteView):
     model = Product
-    template_name = 'products/product_delete.html'
+    template_name = 'products/delete.html'
     success_url = reverse_lazy('index')
 
     def get_queryset(self):
         return super().get_queryset().filter(amount__gt=0)
-
