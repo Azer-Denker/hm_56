@@ -1,7 +1,11 @@
+body {
+    background: url('images/fon.jpg');
+}
+
+
 .container {
     padding-top: 50px;
 }
-
 
 .pagination {
     text-align: center;
@@ -10,25 +14,25 @@
 
 .pagination a, .pagination .page-disabled {
     display: inline-block;
-    border: solid 1px #6a7ddd;
+    border: solid 1px #0a8914;
     border-radius: 3px;
     padding: 5px;
     margin: 3px;
 }
 
 .pagination a {
-    background: #6a7ddd;
+    background: #0a8914;
     color: white;
     text-decoration: none;
 }
 
 .pagination a:hover {
-    background: #6a7dff;
+    background: #0a8914;
     text-decoration: underline;
 }
 
 .pagination .page-disabled {
-    background: #6a7dcc;
+    background: #0a8914;
     color: #dddddd
 }
 
@@ -44,5 +48,3 @@
     text-align: center;
     border: solid 1px gray;
 }
-
-
