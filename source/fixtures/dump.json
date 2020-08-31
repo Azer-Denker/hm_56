@@ -1,0 +1,64 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "\u041a\u0443\u0440\u0438\u0446\u0430",
+    "description": "awffa",
+    "category": "food",
+    "amount": 12,
+    "price": "223.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "wwfafa",
+    "description": "sadasf",
+    "category": "drink",
+    "amount": 12,
+    "price": "3232.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "rwfafa",
+    "description": "asfafasf",
+    "category": "electronics",
+    "amount": 2,
+    "price": "123.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "adfa",
+    "description": "aasfa",
+    "category": "cloth",
+    "amount": 32,
+    "price": "1231.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$VR6A8bY3koYm$7w1UJWEVwDmIkuKIhdCY/F9dF6MQjQn2Gxu7ZIkHiB4=",
+    "last_login": "2020-08-24T11:34:04.737Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-24T11:09:26.058Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
